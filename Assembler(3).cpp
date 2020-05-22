@@ -6,9 +6,6 @@ int main() {
 	char value; 
 	int bitNumber; 
 	int bitValue; 
-	L = (value >> bitNumber) << (bitNumber + 1);
-	R = (value << (8 - bitNumber)) >> (8 - bitNumber);
-	value = L | R | (bitValue << bitNumber);
 	_asm {
 		mov     al, [value]
 		mov     cx, [bitNumber]
