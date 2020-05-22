@@ -6,24 +6,24 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     int A[3], B[3], C[3], x, y, z = 0;
-    printf("Данная ...: Summ(Ai * Bi) * X + Summ(Ci) * Y");
+    printf("Р’С‹СЂР°Р¶РµРЅРёРµ: Summ(Ai * Bi) * X + Summ(Ci) * Y");
     for (int i = 0; i < 3; i++) {
-        printf("Введдите значение элемента A[%i]:\n", i + 1);
+        printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° A[%i]:\n", i + 1);
         scanf("%i", &A[i]);
     }
     for (int i = 0; i < 3; i++) {
-        printf("Введдите значение элемента B[%i]:\n", i + 1);
+        printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° B[%i]:\n", i + 1);
         scanf("%i", &B[i]);
         B[i] *= A[i];
     }
     for (int i = 0; i < 3; i++) {
-        printf("Введдите значение элемента C[%i]:\n", i + 1);
+        printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° C[%i]:\n", i + 1);
         scanf("%i", &C[i]);
         z += C[i];
     }
-    printf("Введдите число X:\n");
+    printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ X:\n");
     scanf("%i", &x);
-    printf("Введдите число Y:\n");
+    printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ Y:\n");
     scanf("%i", &y);
     z = (B[0] + B[1] + B[2]) * x + z * y;
     _asm {
@@ -51,6 +51,8 @@ int main()
             imul y
             add x, eax
     }
-    printf("Result on Asm: %i\n", x);
-    printf("Result on C++: %i\n", z);
+    printf("Р РµР·СѓР»СЊС‚Р°С‚ РЅР° Asm: %i\n", x);
+    printf("Р РµР·СѓР»СЊС‚Р°С‚ РЅР° C++: %i\n", z);
+    system("pause");
+	return 0;
 }
