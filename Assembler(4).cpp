@@ -50,5 +50,16 @@ int main()
 
             mov ax, 0100h
             int 21h
+
+        push esi
+        push ecx
+        push [esi]
+        lea eax,buff
+        push eax
+        call printf
+        add esp,8
+        pop ecx
+        pop esi
+        add esi,4
 	}
 }
