@@ -1,3 +1,8 @@
+/* Author: Девятов Анатолий
+Group: СББ-901
+Task# 4.30 
+Description: Найти количество квадратов со стороной k, которые пересекаются диагональю прямоугольника со сторонами m,n
+*/  
 #include <cstdio>
 #include <cstdlib>
 #include <cmath>
